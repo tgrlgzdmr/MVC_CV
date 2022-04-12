@@ -16,5 +16,57 @@ namespace MVC_CV.Controllers
             var values = db.Tbl_About.ToList();
             return View(values);
         }
+
+        public PartialViewResult Experience()
+        {
+            var experiences = db.Tbl_Experience.ToList();
+            return PartialView(experiences);
+        }
+
+        public PartialViewResult Education()
+        {
+            var educations = db.Tbl_Education.ToList();
+            return PartialView(educations);
+        }
+
+        public PartialViewResult Skill()
+        {
+            var skills = db.Tbl_Skill.ToList();
+            return PartialView(skills);
+        }
+
+        public PartialViewResult Interest()
+        {
+            var intetersts = db.Tbl_Interest.ToList();
+            return PartialView(intetersts);
+        }
+
+        public PartialViewResult Certificates()
+        {
+            var certificates = db.Tbl_Certificates.ToList();
+            return PartialView(certificates);
+        }
+
+        public PartialViewResult Project()
+        {
+            var projects = db.Tbl_Project.ToList();
+            return PartialView(projects);
+        }
+
+        [HttpGet]
+        public PartialViewResult Contact()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult Contact(Tbl_Contact t)
+        {
+            t.Date=DateTime.Now.ToShortDateString();
+            db.Tbl_Contact.Add(t);
+            db.SaveChanges();
+            return PartialView();
+        }
+
     }
 }

@@ -17,7 +17,7 @@ namespace MVC_CV.Models.Entity
         public int Id { get; set; }
         public string Title { get; set; }
         public string Subtitle { get; set; }
-        public byte[] Explanation { get; set; }
+        public string Explanation { get; set; }
         public string Date { get; set; }
     }
 }
