@@ -1,0 +1,19 @@
+﻿@using MVC_CV.Models.Entity
+@model Tbl_Skill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Add New Skill Page</h4>
+<br />
+<form method="post">
+    @Html.Label("Skill Name")
+    @Html.TextBoxFor(x => x.Skill, new { @class = "form-control" })
+    <br />
+    @Html.Label("Skill Level (0-100)")
+    @Html.TextBoxFor(x => x.Level, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-danger">Add New Skill</button>
+</form>

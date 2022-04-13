@@ -16,5 +16,6 @@ namespace MVC_CV.Models.Entity
     {
         public int Id { get; set; }
         public string Explanation { get; set; }
+        public string Date { get; set; }
     }
 }

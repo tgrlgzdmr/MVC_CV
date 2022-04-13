@@ -32,6 +32,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Explanation" Type="varchar" MaxLength="250" />
+          <Property Name="Date" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Tbl_Contact">
           <Key>
@@ -133,6 +134,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Explanation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Tbl_Contact">
           <Key>
@@ -235,6 +237,7 @@
           <EntitySetMapping Name="Tbl_Certificates">
             <EntityTypeMapping TypeName="DbCVModel.Tbl_Certificates">
               <MappingFragment StoreEntitySet="Tbl_Certificates">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Explanation" ColumnName="Explanation" />
               </MappingFragment>
