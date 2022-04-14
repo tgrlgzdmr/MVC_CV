@@ -1,0 +1,24 @@
+﻿@using MVC_CV.Models.Entity
+@model Tbl_Certificates
+@{
+    ViewBag.Title = "UpdateCertificate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Update Certificate Page</h4>
+<br />
+<form method="post">
+    @Html.Label("Certificate Id")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Certificate Explanation")
+    @Html.TextBoxFor(x => x.Explanation, new { @class = "form-control" })
+    <br />
+    @Html.Label("Certificita Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-danger">Update</button>
+</form>
+
+

@@ -1,20 +1,40 @@
-﻿
+﻿@using MVC_CV.Models.Entity
+@model List<Tbl_About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>About Page</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>City</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Burak</td>
-        <td>Samsun</td>
-    </tr>
-</table>
+<br />
+<h2>About Edit Page</h2>
+<br />
+<form method="post">
+
+    @foreach (var x in Model)
+    {
+        <label>Name</label>
+        <input type="text" class="form-control" name="Name" value="@x.Name" />
+        <br />
+        <label>Surname</label>
+        <input type="text" class="form-control" name="Surname" value="@x.Surname" />
+        <br />
+        <label>Address</label>
+        <textarea rows="5" class="form-control" name="Address">@x.Address</textarea>
+        <br />
+        <label>Phone</label>
+        <input type="text" class="form-control" name="Phone" value="@x.Phone" />
+        <br />
+        <label>Mail</label>
+        <input type="text" class="form-control" name="Mail" value="@x.Mail" />
+        <br />
+        <label>Explanation</label>
+        <textarea rows="5" class="form-control" name="Explanation">@x.Explanation</textarea>
+        <br />
+        <label>Picture</label>
+        <input type="text" class="form-control" name="Picture" value="@x.Picture" />
+        <br />
+    }
+    <br />
+    <button class="btn btn-success">Update</button>
+</form>
 
