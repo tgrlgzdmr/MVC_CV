@@ -1,0 +1,11 @@
+﻿@using MVC_CV.Models.Entity
+@model List<Tbl_SocialMedia>
+
+
+<div class="social-icons">
+    @foreach(var x in Model)
+    {
+    <a class="social-icon" href="@x.Link"><i class="@x.icon"></i></a>
+    }
+</div>
+

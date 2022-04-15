@@ -34,5 +34,6 @@ namespace MVC_CV.Models.Entity
         public virtual DbSet<Tbl_Interest> Tbl_Interest { get; set; }
         public virtual DbSet<Tbl_Project> Tbl_Project { get; set; }
         public virtual DbSet<Tbl_Skill> Tbl_Skill { get; set; }
+        public virtual DbSet<Tbl_SocialMedia> Tbl_SocialMedia { get; set; }
     }
 }
