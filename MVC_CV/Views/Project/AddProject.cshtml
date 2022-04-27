@@ -1,0 +1,30 @@
+﻿@model MVC_CV.Models.Entity.Tbl_Project
+
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Add New Project Page</h4>
+<br />
+<form method="post">
+    
+    @Html.Label("Project Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Project Explanation")
+    @Html.TextBoxFor(x => x.Explanation, new { @class = "form-control" })
+    <br />
+    @Html.Label("URL")
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+    @Html.Label("date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control", @style="datetime", placeholder="mm/gg/yyyy" })
+
+
+    <br />
+    <button class="btn btn-danger">Add New Project</button>
+</form>
+

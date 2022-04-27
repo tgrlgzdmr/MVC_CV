@@ -1,0 +1,36 @@
+﻿@using MVC_CV.Models.Entity
+@model List<Tbl_Project>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Project List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Explanation</th>
+        <th>URL</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Title</td>
+            <td>@x.Explanation</td>
+            <td>@x.Url</td>
+            <td>@x.Date</td>
+            <td><a href="/Project/DeleteProject/@x.Id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Project/UpdateProject/@x.Id" class="btn btn-warning">Update</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Project/AddProject/" class="btn btn-primary">Add New Project</a>
+

@@ -1,0 +1,3 @@
+Samsun1864%
+
+<add name="DbCVEntities" connectionString="metadata=res://*/Models.Entity.Model1.csdl|res://*/Models.Entity.Model1.ssdl|res://*/Models.Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-T4GE7A8\SQLEXPRESS;initial catalog=DbCV;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />

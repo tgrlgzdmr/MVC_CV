@@ -18,6 +18,6 @@ namespace MVC_CV.Models.Entity
         public string Title { get; set; }
         public string Explanation { get; set; }
         public string Url { get; set; }
-        public string Date { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
     }
 }

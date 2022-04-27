@@ -56,7 +56,7 @@ namespace MVC_CV.Controllers
 
         public PartialViewResult Project()
         {
-            var projects = db.Tbl_Project.ToList();
+            var projects = db.Tbl_Project.OrderByDescending(x=>x.Id).ToList();
             return PartialView(projects);
         }
 

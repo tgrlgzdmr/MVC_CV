@@ -82,7 +82,7 @@
           <Property Name="Title" Type="varchar" MaxLength="100" />
           <Property Name="Explanation" Type="varchar" MaxLength="500" />
           <Property Name="Url" Type="varchar" MaxLength="250" />
-          <Property Name="Date" Type="varchar" MaxLength="100" />
+          <Property Name="Date" Type="datetime" />
         </EntityType>
         <EntityType Name="Tbl_Skill">
           <Key>
@@ -195,7 +195,7 @@
           <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Explanation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" />
         </EntityType>
         <EntityType Name="Tbl_Skill">
           <Key>

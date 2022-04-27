@@ -1,1 +1,21 @@
-﻿<h2>Projeler</h2>
+﻿@using MVC_CV.Models.Entity
+@model List<Tbl_Project>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Projects</h2>
+    @foreach (var x in Model)
+    {
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <a href="@x.Url">
+                    <h3 class="mb-0">@x.Title</h3>
+                </a>
+                <div class="subheading mb-3">@x.Explanation</div>
+                <a class="social-icon" href="@x.Url"><i class="fab fa-github"></i>GitHub</a>
+
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">@(((DateTime)x.Date).ToString("MMM yyyy"))</span></div>
+        </div>
+    }
+</div>
+
