@@ -1,0 +1,26 @@
+﻿@model MVC_CV.Models.Entity.Tbl_Interest
+
+@{
+    ViewBag.Title = "UpdateInterest";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Interest Edit Page</h2>
+<br />
+<form method="post">
+
+
+    @Html.Label("Interest Id")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Interest Explanation")
+    @Html.TextBoxFor(x => x.Explanation1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Interest Detail")
+    @Html.TextBoxFor(x => x.Explanation2, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Update</button>
+</form>
+

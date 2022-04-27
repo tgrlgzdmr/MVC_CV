@@ -13,20 +13,46 @@ namespace MVC_CV.Controllers
         GenericRepository<Tbl_Interest> repo = new GenericRepository<Tbl_Interest>();
         // GET: Interest
 
-        [HttpGet]
+
         public ActionResult Index()
         {
             var interest = repo.List();
             return View(interest);
         }
 
-        [HttpPost]
-        public ActionResult Index(Tbl_Interest p)
+        [HttpGet]
+        public ActionResult UpdateInterest(int id)
         {
-            Tbl_Interest t = repo.Find(x => x.Id == 1);
+            Tbl_Interest t = repo.Find(x => x.Id == id);
+            
+            return View(t);
+        }
+        [HttpPost]
+        public ActionResult UpdateInterest(Tbl_Interest p)
+        {
+            Tbl_Interest t = repo.Find(x => x.Id == p.Id);
             t.Explanation1 = p.Explanation1;
             t.Explanation2 = p.Explanation2;
             repo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteInterest(int id)
+        {
+            Tbl_Interest t=repo.Find(x => x.Id == id);
+            repo.TDelete(t);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult AddInterest()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddInterest(Tbl_Interest p)
+        {
+            repo.TAdd(p);
             return RedirectToAction("Index");
         }
 
